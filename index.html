@@ -11,41 +11,65 @@
 
 <body>
 <div class="container">
-  <div class="product-card">
-    <div class="product-card__slider slider">
-      <div class="slider__inner">
-        <div class="slider__item">
-          <a href="">
+  <div class="product-card" data-link="/card">
+
+    <div class="product-card__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
             <img src="/assets/images/goods/good1.png" alt="">
           </a>
         </div>
 
-        <div class="slider__item">
-          <a href="">
-            <img src="" alt="">
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
+            <img src="/assets/images/goods/good1.png" alt="">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
+            <img src="/assets/images/goods/good1.png" alt="">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
+            <img src="/assets/images/goods/good1.png" alt="">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
+            <img src="/assets/images/goods/good1.png" alt="">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="/assets/images/goods/good1.png" data-fancybox="gallery-1">
+            <img src="/assets/images/goods/good1.png" alt="">
           </a>
         </div>
       </div>
 
-      <div class="slider__pagination">
-
-      </div>
-
-      <button class="slider__btn btn-prev">
+      <button class="slider__btn slider-btn--prev">
         <svg class="product-card__icon" width="19" height="19">
           <use xlink:href="assets/images/sprite.svg#arrow_left"></use>
         </svg>
       </button>
-      <button class="slider__btn btn-next">
+      <button class="slider__btn slider-btn--next">
         <svg class="product-card__icon" width="19" height="19">
           <use xlink:href="assets/images/sprite.svg#arrow_right"></use>
         </svg>
       </button>
-      <button class="slider__btn btn-zoom">
+      <button class="slider__btn slider-btn--zoom">
         <svg class="product-card__icon" width="24" height="24">
           <use xlink:href="assets/images/sprite.svg#resize"></use>
         </svg>
       </button>
+    </div>
+
+    <div class="slider-pagination">
     </div>
 
     <div class="product-card__content">
@@ -63,32 +87,54 @@
         <ul class="modifications__list">
           <li class="modifications__item">
             <button class="modifications__btn modifications__btn-active">
-            <span class="modifications__btn-text">
-              ПВХ
-            </span>
+              <span class="modifications__icon-wrapper">
+                <svg class="modifications__btn-icon" width="14" height="14">
+                  <use xlink:href="assets/images/sprite.svg#check"></use>
+                </svg>
+              </span>
+              <span class="modifications__btn-text">
+                ПВХ
+              </span>
             </button>
           </li>
           <li class="modifications__item">
-            <button class="modifications__btn" disabled>
-            <span class="modifications__btn-text">
-              Эмаль
-            </span>
+            <button class="modifications__btn">
+              <span class="modifications__icon-wrapper style-disable">
+                <svg class="modifications__btn-icon" width="14" height="14">
+                  <use xlink:href="assets/images/sprite.svg#check"></use>
+                </svg>
+              </span>
+              <span class="modifications__btn-text">
+                Эмаль
+              </span>
             </button>
           </li>
           <li class="modifications__item">
-            <button class="modifications__btn" disabled>
-            <span class="modifications__btn-text">
-              Пластик
-            </span>
+            <button class="modifications__btn">
+              <span class="modifications__icon-wrapper style-disable">
+                <svg class="modifications__btn-icon" width="14" height="14">
+                  <use xlink:href="assets/images/sprite.svg#check"></use>
+                </svg>
+              </span>
+              <span class="modifications__btn-text">
+                Пластик
+              </span>
             </button>
           </li>
           <li class="modifications__item">
-            <button class="modifications__btn" disabled>
-            <span class="modifications__btn-text">
-              Массив
-            </span>
+            <button class="modifications__btn">
+              <span class="modifications__icon-wrapper style-disable">
+                <svg class="modifications__btn-icon" width="14" height="14">
+                  <use xlink:href="assets/images/sprite.svg#check"></use>
+                </svg>
+              </span>
+              <span class="modifications__btn-text">
+                Массив
+              </span>
             </button>
           </li>
+
+
         </ul>
       </div>
 
@@ -124,5 +170,10 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+<script src="/script.js"></script>
+
 </body>
 </html>
