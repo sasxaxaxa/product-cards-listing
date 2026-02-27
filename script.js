@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         el: paginationEl,
         clickable: true,
       },
-      autoplay: false
+      autoplay: isMobile ? {
+        delay: 3000,
+        disableOnInteraction: false,
+      } : false
     });
 
     card.swiper = swiper;
