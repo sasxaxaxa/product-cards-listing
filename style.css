@@ -26,6 +26,7 @@
   --gray600: #32312F;
   --gray500: #464646;
   --gray400: #656565;
+  --gray300: #A1A5AD;
   --gray200: #E6E6E6;
   --gray100: #F6F6F6;
   --gray0: #FFFFFF;
@@ -85,7 +86,7 @@ body {
 }
 
 .product-card {
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.1s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -159,11 +160,17 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
+  background: var(--gray100);
+  transition: background 0.2s ease;
 }
 
 .modifications__btn-active {
   background: var(--gray600);
+  color: var(--gray0);
+}
 
+.modifications__btn:hover {
+  background: var(--gray400);
   color: var(--gray0);
 }
 
@@ -220,13 +227,12 @@ body {
 }
 
 .product-card__likes {
-  padding-inline: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.likes__title {
+.likes__value {
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
@@ -238,6 +244,28 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 5px;
+  background: var(--gray100);
+  border-radius: 18px;
+  padding: 6px 12px;
+  transition: background 0.3s ease;
+}
+
+.likes__btn:hover {
+  background:  #fa6b6e;
+}
+
+.likes__icon {
+  color: var(--gray300);
+}
+
+.likes__btn:hover .likes__icon,
+.likes__btn:hover .likes__value {
+  color: var(--gray0);
+}
+
+.likes__btn:active {
+  background:  #fa6b6e;;
 }
 
 .likes,
@@ -272,6 +300,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-36%);
+  transition: background 0.2s ease;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   border-radius: 50%;
@@ -283,9 +312,14 @@ body {
   z-index: 2;
 }
 
+.slider__btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .slider-btn--prev {
   left: 15px;
 }
+
 .slider-btn--next {
   right: 15px;
 }
@@ -305,6 +339,7 @@ body {
   display: flex;
   padding: 10px 20px 0 20px;
   background: var(--gray100);
+  transition: background 0.1s ease;
 }
 
 .slider-pagination .swiper-pagination-bullet {
@@ -348,7 +383,7 @@ body {
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.3s ease, background 0.2s ease;;
 }
 
 .product-card:hover .product-card__buy {
@@ -367,4 +402,13 @@ body {
 
 .separator7 {
   margin-inline: 7px;
+}
+
+.likes__btn--active {
+  background: #D43336;
+}
+
+.likes__btn--active .likes__icon,
+.likes__btn--active .likes__value {
+  color: var(--gray0);
 }
