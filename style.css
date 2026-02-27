@@ -371,12 +371,12 @@ body {
   margin-inline: 7px;
 }
 
-.likes__btn--active {
+.likes__btn-active {
   background: #D43336;
 }
 
-.likes__btn--active .likes__icon,
-.likes__btn--active .likes__value {
+.likes__btn-active .likes__icon,
+.likes__btn-active .likes__value {
   color: var(--gray0);
 }
 
@@ -525,4 +525,14 @@ body {
   .likes__btn:hover .likes__value {
     color: var(--gray0);
   }
+
+  .modifications__btn-active:hover {
+    background: var(--gray600);
+    color: var(--gray0);
+  }
+
+  .likes__btn-active:hover {
+    background: #D43336;
+  }
 }
+

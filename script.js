@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (isLiked) {
         likesCount--;
-        this.classList.remove('likes__btn--active');
+        this.classList.remove('likes__btn-active');
         isLiked = false;
       } else {
         likesCount++;
-        this.classList.add('likes__btn--active');
+        this.classList.add('likes__btn-active');
         isLiked = true;
       }
 
