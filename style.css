@@ -38,6 +38,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 ul {
@@ -200,7 +203,6 @@ body {
   gap: 3px;
 }
 
-
 .price__value {
   font-weight: 600;
   font-size: 22px;
@@ -250,11 +252,9 @@ body {
   transition: background 0.3s ease;
 }
 
-
 .likes__icon {
   color: var(--gray300);
 }
-
 
 .likes,
 .btn__calculation{
@@ -476,53 +476,54 @@ body {
   }
 }
 
-.product-card:hover {
-  background: var(--gray0);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-}
+@media (hover: hover) {
+  .product-card:hover {
+    background: var(--gray0);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  }
 
-.product-card:hover .slider-pagination {
-  background: var(--gray0);
-}
+  .product-card:hover .slider-pagination {
+    background: var(--gray0);
+  }
 
-.product-card:hover .product-card__description {
-  opacity: 1;
-  max-height: 100px;
-}
+  .product-card:hover .product-card__description {
+    opacity: 1;
+    max-height: 100px;
+  }
 
-.product-card:hover .product-card__buy {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+  .product-card:hover .product-card__buy {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-.product-card__buy:hover {
-  background: #e65300;
-}
+  .product-card__buy:hover {
+    background: #e65300;
+  }
 
-.slider__btn:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
+  .slider__btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
 
-.likes__btn:active {
-  transform: scale(0.95);
-}
+  .likes__btn:active {
+    transform: scale(0.95);
+  }
 
-.btn__calculation:hover {
-  color: var(--gray600);
-}
+  .btn__calculation:hover {
+    color: var(--gray600);
+  }
 
-.modifications__btn:hover {
-  background: var(--gray400);
-  color: var(--gray0);
-}
+  .modifications__btn:hover {
+    background: var(--gray400);
+    color: var(--gray0);
+  }
 
-.likes__btn:hover {
-  background:  #fa6b6e;
-}
+  .likes__btn:hover {
+    background:  #fa6b6e;
+  }
 
-.likes__btn:hover .likes__icon,
-.likes__btn:hover .likes__value {
-  color: var(--gray0);
+  .likes__btn:hover .likes__icon,
+  .likes__btn:hover .likes__value {
+    color: var(--gray0);
+  }
 }
-
