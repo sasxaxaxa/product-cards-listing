@@ -2,10 +2,14 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
   document.querySelectorAll('.product-card').forEach((card, index) => {
     initCardSlider(card);
+    initZoomButton(card);
+    initCardClick(card);
     initModifications(card);
+    initLike(card);
   });
 
   function initCardSlider(card, isMobile) {
@@ -28,6 +32,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     card.swiper = swiper;
+  }
+
+  function initZoomButton(card) {
+    const zoomBtn = card.querySelector('.slider-btn--zoom');
+
+    if (zoomBtn) {
+      zoomBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+
+        const activeSlide = card.querySelector('.swiper-slide-active a');
+        if (activeSlide) {
+          activeSlide.click();
+        }
+      });
+    }
+  }
+
+  function initCardClick(card) {
+    card.addEventListener('click', function(e) {
+      const target = e.target;
+      const interactiveSelectors = [
+        'button',
+        'a',
+        '.swiper-pagination-bullet',
+        '[data-fancybox]'
+      ];
+
+      let isInteractive = false;
+      for (const selector of interactiveSelectors) {
+        if (target.closest(selector)) {
+          isInteractive = true;
+          break;
+        }
+      }
+
+      if (!isInteractive) {
+        const cardLink = card.dataset.link || '/card';
+        window.open(cardLink, '_blank');
+      }
+    });
   }
 
   function initModifications(card) {
@@ -55,6 +99,34 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!button.classList.contains('modifications__btn-active')) {
         iconWrapper.classList.add('style-disable');
       }
+    });
+  }
+
+  function initLike(card) {
+    const likeBtn = card.querySelector('.likes__btn');
+    const likeValue = card.querySelector('.likes__value');
+
+    let isLiked = false;
+    let likesCount = parseInt(likeValue.textContent) || 0;
+
+    likeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+
+      if (isLiked) {
+        likesCount--;
+        this.classList.remove('likes__btn--active');
+        isLiked = false;
+      } else {
+        likesCount++;
+        this.classList.add('likes__btn--active');
+        isLiked = true;
+      }
+
+      likeValue.textContent = likesCount;
+      this.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        this.style.transform = 'scale(1)';
+      }, 100);
     });
   }
 });
