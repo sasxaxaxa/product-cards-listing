@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
   document.querySelectorAll('.product-card').forEach((card, index) => {
-    initCardSlider(card);
+    initCardSlider(card, isMobile);
     initZoomButton(card);
     initCardClick(card);
     initModifications(card);
