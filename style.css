@@ -32,6 +32,8 @@
   --gray0: #FFFFFF;
 
   --orange200: #FF5C00;
+
+  font-size: 16px;
 }
 
 * {
@@ -105,14 +107,14 @@ body {
 .price__title,
 .price__description {
   color: var(--gray400);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 150%;
 }
 
 .product-card__title {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 120%;
   color: var(--gray600);
   margin-top: 3px;
@@ -126,7 +128,7 @@ body {
   height: 61px;
   padding: 20px 20px;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 150%;
   color: var(--gray0);
@@ -150,7 +152,7 @@ body {
   align-items: center;
   gap: 7px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   background: var(--gray100);
   transition: background 0.2s ease;
@@ -205,14 +207,14 @@ body {
 
 .price__value {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 120%;
   color: var(--gray600);
 }
 
 .price__description-accent {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   color: var(--gray600);
 }
@@ -235,7 +237,7 @@ body {
 
 .likes__value {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   color: var(--gray600);
 }
@@ -266,7 +268,7 @@ body {
 
 .btn__calculation {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 150%;
   color: var(--gray400);
 }
@@ -393,18 +395,18 @@ body {
   }
 
   .product-card__title {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .product-card__art,
   .modifications__title,
   .price__title,
   .price__description {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .price__value {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .slider__btn:not(.slider-btn--zoom) {
@@ -412,7 +414,7 @@ body {
   }
 
   .product-card__buy {
-    font-size: 14px;
+    font-size: 0.875rem;
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -432,7 +434,7 @@ body {
   }
 
   .price__description-accent {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .product-card__content {
@@ -450,7 +452,7 @@ body {
 
   .modifications__btn {
     padding: 4px 10px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .product-card__bottom {
@@ -467,12 +469,9 @@ body {
     padding: 4px 10px;
   }
 
-  .likes__value {
-    font-size: 12px;
-  }
-
+  .likes__value,
   .btn__calculation {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
