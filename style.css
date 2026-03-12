@@ -118,6 +118,7 @@ body {
   line-height: 120%;
   color: var(--gray600);
   margin-top: 3px;
+  height: 53px;
 }
 
 .product-card__description {
